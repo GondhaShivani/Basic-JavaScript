@@ -1,0 +1,47 @@
+* {
+  background-color: rgb(4, 4, 82);
+}
+
+.body {
+  text-align: center;
+}
+
+.main-heading {
+  color: #e3df6c;
+  text-align: center;
+  place-items: center;
+  display: grid;
+  justify-content: center;
+}
+
+#heading {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-size: 87px;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 600px;
+}
+/* 
+#btn1 {
+  background-color: rgb(229, 136, 50);
+  color: rgb(0, 0, 0);
+  width: 160px;
+  padding: 15px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: large;
+}
+
+#btn2 {
+  background-color: rgb(229, 136, 50);
+  color: rgb(0, 0, 0);
+  width: 160px;
+  padding: 15px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: large;
+}
+
+#myImage {
+  width: 200px;
+} */
