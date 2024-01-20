@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="resizefunction()">
+
+    <img src="48_width.png" width="600px">
+    <img src="48_height.png" width="600px">
+
+    <script>
+
+        function resizefunction(){
+
+            console.clear();
+            var iheight = window.innerHeight;
+            console.log('Inner Height = ' + iheight);
+
+            var oheight = window.outerHeight;
+            console.log('Outer Height = ' + oheight);
+
+            var iwidth = window.innerWidth;
+            console.log('Inner Width = ' + iwidth);
+
+            var owidth = window.outerWidth;
+            console.log('Outer Width = ' + owidth);
+
+        }
+        
+    </script>
+</body>
+</html>

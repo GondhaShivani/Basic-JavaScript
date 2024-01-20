@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="list1">
+        <li>orange</li>
+        <li>banana</li>
+        <li class="g">grapes</li>
+        <li>apple</li>
+    </ul>
+
+    <ul id="list2">
+        <li>orange</li>
+        <li class="abc">banana</li>
+        <li>apple</li>
+        <li class="gg">grapes</li>
+    </ul>
+
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptate, minus deserunt fugit reprehenderit, distinctio perspiciatis a inventore id quam illo. Sunt voluptatibus beatae dolore rem rerum, mollitia quisquam ut magni vel nostrum ea facere tempore harum impedit quod commodi.</p>
+
+    <img src="43_isEqualNode.png" width="400px">
+    
+    <script>
+        /* //1
+        var target1 = document.getElementById("list1").firstElementChild;
+
+        var target2 = document.getElementById("list2").firstElementChild;
+
+        var equal = target1.isEqualNode(target2);
+
+        console.log(equal);//true */
+
+
+
+        /* //2
+        var target1 = document.getElementById("list1").firstElementChild;
+
+        var target2 = document.getElementById("list2").children[1];
+
+        var equal = target1.isEqualNode(target2);
+
+        console.log(equal);//false */
+
+
+
+        /* //3
+        var target1 = document.getElementById("list1").firstElementChild;
+
+        var target2 = document.getElementById("para1").firstElementChild;
+
+        var equal = target1.isEqualNode(target2);
+
+        console.log(equal);//false */
+
+
+        /* //4 
+        var target1 = document.getElementById("list1").children[1];
+
+        var target2 = document.getElementById("list2").children[1];
+
+        var equal = target1.isEqualNode(target2);
+
+        console.log(equal);//false 
+        //1 has class 1 hasn't class */
+
+
+        //5
+        var target1 = document.getElementById("list1").children[2];
+
+        var target2 = document.getElementById("list2").children[3];
+
+        var equal = target1.isEqualNode(target2);
+
+        console.log(equal);//false 
+        //class names are different.
+    </script>
+</body>
+</html>

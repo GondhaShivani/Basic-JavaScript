@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //------------1
+        var arr = [10,20,30,40];
+        for(var a=0; a<arr.length; a++){
+            document.write(arr[a] + " ");
+        }
+        document.write("<br><br>");
+
+        //---------------2
+        for(var a=arr.length-1; a>=0; a--){
+            document.write(arr[a] + " ");
+        }
+        document.write("<br><br>");
+
+        //--------------3
+        var ary = [10, 20, 30, 40, 50];
+        //var ary = new array(10, 20, 30, 40, 50);
+        var sum = 0;
+        for (var a = 0; a < ary.length; a++) {
+            document.write(ary[a] + " ");
+            sum = sum + ary[a];
+        }
+        document.write("<br>Total Sum:" + sum);
+        document.write("<br><br>");
+
+        //-------------4
+        var ary = [10, "Harry","Sarah", true, null];
+        for (a = 0; a < 5; a++) {
+            document.write(ary[a] + " ");
+        }
+        document.write("<br><br>");
+
+
+        /* //--------------5
+        var ary = new Array(3);
+
+        for(var g = 0; g < 3; g++){
+            ary[g] = prompt("Enter the Value : ");
+        }
+
+        for(var a = 0; a < 3; a++){
+        document.write(ary[a] + " ");
+        }
+        document.write("<br><br>"); */
+
+
+        //------------6 
+        var arr = [
+            ["shivani",19,"gondha"],
+            ["hetvi",23,"garala"],
+            ["foram",18,"gondha"]
+        ];
+
+        document.write("<table border='1px' cellspacing='0'>")
+        for(var i=0; i<arr.length; i++){
+            document.write("<tr>");
+            for(var j=0; j<arr.length;  j++){
+
+                document.write("<td>" + arr[i][j] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        //document.write("<br><br>");
+        document.write("</table>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //-----------1
+        var a = [1,2,3,4,5];
+
+        var b = a.map(function(x){
+            return x*10;
+        });
+
+        document.write(b);
+        document.write("<br>");
+
+
+        //---------------2
+        var ary = [
+        {fname : "hello " , lname : "world "},
+        {fname : "hey " , lname : "baby "},
+        {fname : "jay " , lname : "Dwarkadhish "}
+        ];
+
+        var e = ary.map(test);
+        document.write(e);
+
+        function test(x){
+        return x.fname + "  " + x.lname;
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">
+        <h2>Hello</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae deserunt aperiam optio velit sed dolorem, eos illo soluta facere maiores, expedita aliquid assumenda placeat qui. Nisi ad sunt non dolores!</p>
+    </div>
+
+
+    <script>
+        //hasAttribute
+        var target1 = document.getElementById("test");
+
+        var find1 = target1.hasAttribute("class");//false
+
+        //var find = target.hasAttribute("id");//true
+
+        console.log(find1);
+
+
+        //hasChildNodes - also count space, enter, text
+        var target2 = document.getElementById("test");
+
+        var find2 = target2.hasChildNodes();//true ->> <h2><p>it counts empty space also
+
+        console.log(find2);
+
+    </script>
+</body>
+</html>

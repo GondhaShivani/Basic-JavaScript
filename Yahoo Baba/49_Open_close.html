@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="49_open_close.png" width="600px" border="2px solid black">
+    <br><br>
+
+    <button onclick="openWindow()" style="background-color: aquamarine; border: 2px solid fuchsia;">Open Window</button>
+    <br><br>
+
+    <button onclick="openYahoo()" style="background-color: cyan; border: 2px solid rgb(41, 41, 47);">Open yahoobaba Website</button>
+
+    <button onclick="closeYahoo()" style="background-color: cyan; border: 2px solid blue;">Close yahoobaba Website</button>
+
+    <script>
+
+        function openWindow(){
+            window.open();
+        }
+
+        var mywindow;
+        function openYahoo(){
+            var mywindow = window.open("https://www.yahoobaba.net", "_blank", "width=700px,height=400px,left=700px, top=200px, down=200px");
+            //_blank = open in new tab
+            //_parent = open in same tab
+        }
+
+        function closeYahoo(){
+            mywindow.close();
+        }
+    </script>
+</body>
+</html>

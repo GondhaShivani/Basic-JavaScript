@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = "Hello World";  //global var -- access anywhere
+        function hello(){
+            document.write(a + " ");
+            var b="func var";  //local var -- access only within function
+            document.write(b + " ");  
+        }
+        document.write(a + " ");
+        hello();
+        document.write(b); //reference error = b is not defined.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

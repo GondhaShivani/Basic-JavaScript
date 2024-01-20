@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #testInterval{
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+
+        #testTime{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(161, 45, 122);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>SetTimeout - clearTimeout</h1>
+    <div id="testInterval"></div>
+    <button onclick="stopfunc2()">Stop Animation</button>
+    <br><br>
+    <div id="testTime"></div>
+    <script>
+
+
+        /* //1
+        var setInt = setInterval(func1, 3000);
+
+        function func1(){
+            console.log("hello");
+        }
+        //print Hello after every 3 sec Hello Hello....
+
+        var setTime = setTimeout(anim1, 3000);
+
+        function anim1(){
+            console.log("Hiii");
+        }
+        //after 3 seconds print hiii only for 1 time. */
+
+
+
+        //2
+        var a=150;
+        var setInt2 = setInterval(func2, 3000);
+
+        function func2(){
+            var target1 = document.getElementById("testInterval");
+            a=a+150;
+            target1.style.width = a + "px";
+        }
+
+        function stopfunc2(){
+            clearTimeout(setInt2);
+        }
+
+
+
+        var setTime2 = setTimeout(anim2, 3000);
+
+        function anim2(){
+            var target2 = document.getElementById("testTime");
+            target2.style.width = "500px";
+        }
+
+
+        
+    </script>
+</body>
+</html>

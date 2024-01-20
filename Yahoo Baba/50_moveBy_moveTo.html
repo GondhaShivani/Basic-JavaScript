@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>moveTo(left, right)</h1>
+    <h1>moveBy(left, right)</h1>
+
+
+    <img src="50_moveTo.png" width="400px">
+    <img src="50_moveBy.png" width="400px">
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <button onclick="openwindow()">Open Window</button>
+
+    <button onclick="moveTowindow()">Move Window</button>
+
+    <button onclick="moveBywindow()">MoveBy Window</button>
+
+    <script>
+
+        var mywindow;
+
+        function openwindow() {
+            mywindow = window.open("", "", "width=500px,height=200px");
+            mywindow.document.write("<p>Lorem ipsum, dolor sit ipsam alquam.</p>");
+        }
+
+        function moveTowindow() {
+            mywindow.moveTo(100, 100);
+        }
+
+        function moveBywindow(){
+            mywindow.moveBy(250, 250);
+
+        }
+
+    </script>
+</body>
+</html>

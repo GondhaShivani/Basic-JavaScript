@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cloneNode</h1>
+
+    <h3>Fruits</h3>
+    <ul id="listF">
+        <li>Banana</li>
+        <li>grapes</li>
+        <li>apple</li>
+        <li>orange</li>
+        <li>jamun</li>
+    </ul><br>
+
+    <h3>Vegetables</h3>
+    <ul id="listV">
+        <li>carrot</li>
+        <li>tomato</li>
+    </ul><br>
+
+    <div id="test" style="background-color: aquamarine; width: 400px; height: 300px;"></div><br>
+    
+    <img src="40_cloneNode.png" width="400px" border="3px">
+
+    <script>
+        var target = document.getElementById("listF").children[2];//select element
+
+        var copyElemenet = target.cloneNode(true);//copy element
+        //bydefault - false copy only attribute not text
+
+        console.log(copyElemenet);
+
+        document.getElementById("listV").appendChild(copyElemenet);
+
+         document.getElementById("test").appendChild(copyElemenet);
+    </script>
+</body>
+</html>

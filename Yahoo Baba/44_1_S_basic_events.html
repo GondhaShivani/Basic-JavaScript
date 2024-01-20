@@ -1,0 +1,137 @@
+<!-- //code-1 -- focus, blur
+//using onfocus="focusFunc(this)" in the html form tag.
+
+//code-2 
+//using addEventListener JS -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        onfocus : styling focused tag or attribute<br>
+        onblur : remove applied styling from onfocus<br>
+        oninput : add div that print entered value of text  
+    </p><br><br>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text" id="name" onfocus="focusFunc(this)" onblur="blurfunc(this)" oninput="inputfunction(this)"><br><br>
+
+        <label for="">Class</label>
+        <input type="text" id="class" onfocus="focusFunc(this)" onblur="blurfunc(this)" oninput="inputfunction(this)"><br><br>
+
+        <label for="">Country</label>
+        <select id="country" onfocus="focusFunc(this)" onblur="blurfunc(this)" oninput="inputfunction(this)">
+            <option value="">India</option>
+            <option value="">Pakistan</option>
+            <option value="">Bangladesh</option>
+            <option value="">SriLanka</option>
+            <option value="">Nepal</option>
+        </select><br><br>
+    </form>
+
+    <div id="test" style="border: 2px solid cadetblue;"></div>
+
+    <script>
+
+        /* //only can apply on name
+        function focusFunc(){
+            document.getElementById("name").style.backgroundColor = "pink";
+        } */
+
+        function focusFunc(element){
+            element.style.background = "pink";
+        }
+
+        function blurfunc(element)
+        {
+            element.style.background = "";
+        }
+
+        function inputfunction(element){
+            var x = element.value;
+            document.getElementById("test").innerHTML = x;
+        }
+    </script>
+</body>
+</html> 
+
+
+
+<!--
+//code-2
+//--------------------using addEventListener 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        onfocus : styling focused tag or attribute<br>
+        onblur : remove applied styling from onfocus
+    </p><br><br>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text" id="name"><br><br>
+
+        <label for="">Class</label>
+        <input type="text" id="class"><br><br>
+
+        <label for="">Country</label>
+        <select id="country">
+            <option value="">India</option>
+            <option value="">Pakistan</option>
+            <option value="">Bangladesh</option>
+            <option value="">SriLanka</option>
+            <option value="">Nepal</option>
+        </select>
+    </form>
+
+    <script>
+        var nameInput = document.getElementById("name");
+        var classInput = document.getElementById("class");
+        var countrySelect = document.getElementById("country");
+
+        nameInput.addEventListener("focus", function() {
+            focusFunc(nameInput);
+        });
+
+        nameInput.addEventListener("blur", function() {
+            blurfunc(nameInput);
+        });
+
+        classInput.addEventListener("focus", function() {
+            focusFunc(classInput);
+        });
+
+        classInput.addEventListener("blur", function() {
+            blurfunc(classInput);
+        });
+
+        countrySelect.addEventListener("focus", function() {
+            focusFunc(countrySelect);
+        });
+
+        countrySelect.addEventListener("blur", function() {
+            blurfunc(countrySelect);
+        });
+
+        function focusFunc(element){
+            element.style.background = "pink";
+        }
+
+        function blurfunc(element){
+            element.style.background = "";
+        }
+    </script>
+</body>
+</html>
+ -->

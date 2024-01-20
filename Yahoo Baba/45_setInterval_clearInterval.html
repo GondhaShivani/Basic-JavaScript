@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test1{
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+        #test2{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(145, 72, 198);
+            border: 2px solid black;
+        }
+        #test3{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(175, 202, 56);
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>setInterval(functionName, milisecond)</h1>
+
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <div id="test3"></div>
+
+
+    <script>
+        var a=20;
+        var set1 = setInterval(anim1 , 300);
+
+        function anim1(){
+            a=a+10;
+
+            if(a==10){
+                clearInterval(set1);
+            }else{
+                var target1 = document.getElementById("test1");
+                test1.style.width = a + 'px';
+            }
+        }
+
+
+        var b=0;
+        var set2 = setInterval(anim2 , 300);
+
+        function anim2(){
+            b=b+10;
+
+            if(b==50){
+                clearInterval(set2);
+            }else{
+                var target2 = document.getElementById("test2");
+                test2.style.width = b + 'px';
+            }
+        }
+
+
+        var c=0;
+        var set3 = setInterval(anim3 , 300);
+
+        function anim3(){
+            c=c+10;
+
+            if(c==50){
+                clearInterval(set3);
+            }else{
+                var target3 = document.getElementById("test3");
+                test3.style.width = c + 'px';
+            }
+        }
+    </script>
+</body>
+</html>

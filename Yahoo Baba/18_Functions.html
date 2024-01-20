@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        document.write("Ex1<br>");
+        function hello(){
+            document.write("Hello again <br>");
+        }
+        hello();
+        hello();
+
+        document.write("Ex2<br>");
+        //With Parameters
+        function sum(a, b){
+            document.write(a + b + "<br>");
+        }
+        sum(2,2);
+        sum(5,5);
+
+        document.write("Ex3<br>");
+        function hello1(fname, lname){
+            document.write(`Hello ${fname} ${lname} <br>`);
+        }
+        hello1("shivani", "Gondha");
+        hello1("shivani");
+        hello1();
+
+        document.write("Ex4<br>");
+        //you can set default value.
+        function hello2(fname="Shivani", lname="Gondha"){
+            document.write(`Hello ${fname} ${lname} <br>`);
+        }
+        hello2("shivani", "Dadhaniya");
+        hello2("shivani");
+        hello2();
+
+        //Functions With Return Value
+        document.write("Ex5<br>");
+        function fullname(fname, lname){
+            var name = fname + " " + lname ;
+            return name;
+        }
+        document.write(fullname("shivani", "Gondha"));
+        document.write("<br>");
+
+        document.write("Ex6<br>");
+        function sumF(maths, sci, eng){
+            var sum = maths+sci+eng;
+            return sum;
+        }
+        //var marks = prompt("Enter 3 subject marks : 1. maths 2. science 3. English");
+        var total = sumF(90, 90, 90);
+
+        function per(tt){
+            per = tt/300 * 100;
+            return per;
+        }
+        var final = per(total);
+        document.write(`you get ${final}% `);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

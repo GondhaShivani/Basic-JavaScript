@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //-------------------1
+		var str = "     JavaScript is a Great is Language";
+
+		var a = str.length; 
+		var b = str.toLowerCase();
+		var c = str.toUpperCase(); 
+        //includes is case sensitive method
+		var d = str.includes("Great");//true 
+        var o = str.includes("GREAT");//false 
+		var e = str.startsWith("Java"); 
+		var f = str.endsWith("age");
+		var g = str.search("is");
+		var h = str.match(/is/g);
+        //return an array
+
+		var i = str.indexOf("is"); 
+		var j = str.lastIndexOf("is"); 
+		var k = str.replace("JavaScript","PHP"); 
+		var l = str.trim(); 
+
+		document.write(a + "<br>");
+		document.write(b + "<br>");
+		document.write(c + "<br>");
+		document.write(d + "<br>");
+        document.write(o + "<br>");
+		document.write(e + "<br>");
+		document.write(f + "<br>");
+		document.write(g + "<br>");
+		document.write(h + "<br>");
+		document.write(i + "<br>");
+		document.write(j + "<br>");
+		document.write(k + "<br>");
+		alert(l);
+
+        //---------------2
+        var str = "JavaScript is a Great is Language";
+        var str2 = "Hello";
+        var str3 = 50;
+        
+        var a = str.charAt(3);
+        document.write(a + "<br>");
+
+        var b = str.charCodeAt(1); 
+        document.write(b + "<br>");
+
+        /* var c = str.fromCharCode(65);
+        document.write(c + "<br>"); */
+
+        var d = str.concat(str2);
+        document.write(d + "<br>");
+
+        var e = str.split(" "); 
+        document.write(e + "<br>");
+
+        var f = str2.repeat(5);
+        document.write(f + "<br>");
+
+        var g = str.slice(3,10); 
+        document.write(g + "<br>");
+
+        var h = str.substr(2,5); 
+        document.write(h + "<br>");
+
+        var i = str.substring(3,5);
+        document.write(i + "<br>");
+
+        var j = str3.toString();
+        document.write(j + 20 + "<br>");
+        
+        var k = str.valueOf(); 
+        document.write(k + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

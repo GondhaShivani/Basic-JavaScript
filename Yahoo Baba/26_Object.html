@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //-----------1
+        //{property : value}
+        var a = {
+            firstName : "Shivani",
+
+            lastName : "Gondha",
+
+            age : 19,
+
+            country : "India",
+
+            email : 'hello@gmail.com',
+
+            favMovies : ["Dhoom","PK","Gajani"],
+
+            salary : function salary(){
+                return '40,00,000';
+            },
+
+            fullName : function fullName(){
+                return this.firstName+" "+this.lastName;
+            },
+
+            living : {
+                'city' : 'Rajkot',
+                'country' : 'India'
+            }
+        }
+        console.log(a);
+        document.write(a.lastName + "<br>");
+        document.write(a.country + "<br>");
+        document.write(a.favMovies[1] + "<br>");
+        document.write(a.salary() + "<br>");
+        document.write(a.fullName() + "<br>");
+        document.write(a.living.city + "<br>");
+        document.write("<br>");
+
+
+        //--------------2
+        var person = new Object();
+
+        person.fname = 'Shivu';
+        person.lname = 'Gondha';
+        person.age = '20';
+        person.fullName = function(){
+            return this.fname+" "+this.lname;
+        };
+        person.hobby = ['dance','sing'];
+
+        document.write(person.fname + "<br>");
+        document.write(person.fullName() + "<br>");
+        document.write(person.hobby[0] + "<br>");
+        document.write("<br>");
+
+
+        //------3 Array of Objects
+        var student = [
+            {name:'shivu', age:19},
+            {name:'falsi', age:18},
+            {name:'hetvi', age:23}
+        ];
+
+        //console.log(student + "<br>");
+        for(var i=0; i<student.length; i++){
+            document.write(student[i].name + " " + student[i].age + "<br>");
+        }
+        document.write("<br>");
+
+
+        //-------4 Const Variable With Array & Objects
+
+        const s = [10,20,30];
+        //s = [20,35,67];//TypeError : Assignment to constant variable.
+        s[0] = 20;//okayby doing this can reset element.
+        s[1] = 35;
+        s[2] = 67;
+        console.log(s);
+
+
+        const v = {
+            name:"hey",
+            age:34,
+        };
+        v.name = "shivani";
+        console.log(v);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

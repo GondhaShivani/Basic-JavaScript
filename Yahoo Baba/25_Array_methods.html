@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = [3, 2, 4, 5, 1];
+        document.write("Array ");
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------Sort
+        document.write("Sort ");
+        a.sort();
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------reverse
+        document.write("Reverse ");
+        a.reverse();
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------pop-delete last element
+        document.write("Pop ");
+        a.pop();//delete last value
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------push-add element at last
+        document.write("Push ");
+        a.push("45");
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------shift-delete first element
+        document.write("shift() ");
+        a.shift();
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------unshift-add element at first
+        document.write("Unshift() ");
+        a.unshift("50");
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------concat
+        //1
+        var a = ["S","H","I"];
+        document.write("concat() ");
+        var b = a.concat("V","U");
+        document.write(b + "<br>");
+
+        //2
+        var a = ["S","H","I"];
+        var b = ["V","A","N","I"];
+        var e = ["S","H","Y"];
+        var t = ["A","M"];
+
+        var c = a.concat(b);
+        document.write(c + "<br>");
+
+        var d = b.concat(a);
+        document.write(d + "<br>");
+
+        var f = a.concat(b,e,t);
+        document.write(f + "<br>");
+        document.write("<br>");
+
+
+        //--------join
+        document.write("join() ");
+        var a = ["S","H","I"];
+        var b = ["V","A","N","I"];
+        var c = a.concat(b);
+        var d = c.join("-"); //d is a string not an array
+        var e = c.join(" "); //space
+
+        document.write(d + "<br>");
+        document.write(e + "<br>");
+        document.write("<br>");
+
+
+        //--------slice(start, end)
+        document.write("slice(start, end) ");
+        var a = ["S","H","I","V"];
+
+        var b = a.slice(0,2);
+        //start-inclusive
+        //end-exclusive
+        document.write(b + "<br>");
+
+        var r = a.slice(-2);
+        document.write(r + "<br>");
+        /*  ["S","H","I","V"];
+             -4  -3  -2  -1     */
+
+        var q = a.slice(-4, -2);
+        document.write(q + "<br>");
+        document.write("<br>");
+
+
+        //--------splice(i,h,n,d)
+        document.write("splice(index, howmany delete,'new value') <br>");
+        var a = ["S","H","I","V"];
+
+        a.splice(2,0,"Y","M");
+        document.write(a + "<br>");
+
+        a.splice(2,2);
+        document.write(a + "<br>");
+        document.write("<br>");
+
+
+        //--------isArray()
+        document.write("isArray() <br> ");
+
+        var a = ["S","H","I","V"];
+        var b = Array.isArray(a);
+        document.write(b + "<br>");//T
+
+        var c = 10;
+        var d = Array.isArray(c);
+        document.write(d + "<br>");//F
+
+        if(Array.isArray(a)){
+            document.write("This is an Array"); 
+        }else{
+            document.write("This is not an Array");  
+        }
+        document.write("<br><br>");
+
+
+        //--------indexOf()
+        document.write("indexOf('value', startingIndex) <br>");
+
+        var a = ["S","H","I","V","H"];
+        var b = a.indexOf("H",2);
+        document.write(b + "<br>");//1
+
+        var b = a.indexOf("V");
+        document.write(b + "<br>");
+
+        var b = a.indexOf("K");
+        document.write(b);//-1
+        document.write("<br><br>");
+
+
+        //--------lastIndexOf()
+        document.write("lastIndexOf('value', HowManyElementCount) <br>");//always start from 0
+
+        var a = ["S","H","I","V","H"];
+        var c = a.lastIndexOf("H");//4
+        document.write(c + "<br>");
+
+        var d = a.lastIndexOf("H",2);//1
+        document.write(d + "<br>");
+
+        var q = a.lastIndexOf("V",4);//3
+        document.write(q + "<br><br>");
+
+
+        //--------Includes()
+        document.write("Includes('searchItem')<br>");
+        var a = ["S","H","I","V","H"];
+        var b = a.includes("H");
+        document.write(b + "<br>");//T
+
+        var r = a.includes("U");
+        document.write(r + "<br>");//f
+
+        var t = a.includes("h");//case sensitive
+        document.write(t + "<br><br>");//f
+
+
+        //--------Some()
+        document.write("Some(function)<br>");
+        document.write("function -> condition<br>");
+
+        var a = [3,2,14,4,8];
+
+        var b = a.some(func);
+        document.write(b + "<br>");//T
+        //if anyone of element is >=8 then direct T no check for ahead.
+
+        function func(a){
+            return a<=1;
+        }
+        document.write("<br>");
+
+
+        //--------every()
+        document.write("every(function)<br>");
+        document.write("function -> condition<br>");
+
+        var a = [3,2,14,4,8];
+
+        var b = a.every(func);
+        document.write(b + "<br>");//T
+        //every element must satisfy the condition.
+
+        function func(a){
+            return a<=100;
+        }
+        document.write("<br>");
+
+
+
+        //--------find(),findindex()
+        document.write("find(function)<br>findIndex(function)<br>");
+        document.write("function -> condition<br>");
+
+        var a = [3,2,14,4,8];
+
+        var b = a.find(func);
+        document.write(b + "<br>");// that 1st element which satisfied condition
+
+        var d = a.findIndex(func);
+        document.write(d + "<br>");// index that 1st element which satisfied condition
+
+        function func(a){
+            return a>=6; 
+        }
+        document.write("<br>");
+
+
+        //--------filter(),filter()
+        document.write("filter(function)<br>");
+        document.write("function -> condition<br>");
+        var a = [3,2,14,4,45,8];
+
+        var b = a.filter(func);
+        document.write(b + "<br>");// array of elements which satisfied condition
+
+        function func(a){
+            return a>=6; 
+        }
+        document.write("<br>");
+
+
+        //--------toString(),valueOf(),fill()
+        document.write("toString() <br>");
+        var a = ["S","H","I","V"];
+
+        a.toString();
+        document.write(a + "<br>");
+
+        document.write("valueOf() <br>");
+        document.write(a.valueOf() + "<br>");
+
+        document.write("fill() <br>");
+        a.fill("S");
+        document.write(a + "<br>");
+        document.write("<br>")
+
+
+        //--------forEach()
+        document.write("forEach() <br>");
+        var a = ["S","H","I","V"];
+        a.forEach(function(value,index){
+            document.write(index + "  :  " + value + "<br>");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

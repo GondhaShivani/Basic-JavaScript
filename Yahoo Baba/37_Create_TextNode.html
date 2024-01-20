@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create & TextNode</h1>
+    <!--
+    Tag -> <p>---</p> -> createElement<br>
+    Text -> Just a text -> createTextNode<br>
+    Comment -> Just a comment -> createComment <br>
+    -->
+    <h1>AppendChild & InsertBefore</h1>
+    <div id="append" style="background-color: cadetblue; width: 800px; height: 400px;">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ab natus animi in deleniti voluptatibus tempore, quam voluptatum nulla tenetur fuga veniam provident nam consequuntur enim quos qui totam et debitis asperiores corrupti magni vitae. Itaque animi eaque quae tempore! In obcaecati dolores debitis! Ipsum quo eius laboriosam numquam similique.
+        </p>
+        <h3>Heading</h3>
+    </div>
+
+    <script>
+
+        //createElement
+
+        var element1 = document.createElement("p");
+        console.log(element1);
+        document.write(element1);
+
+        var element2 = document.createElement("h2");
+        console.log(element2);
+        document.write(element2);
+
+
+        //createTextNode
+
+        var element3 = document.createTextNode("   This is just a text.");
+        console.log(element3);
+        document.write(element3);
+
+
+        //createComment
+
+        var element4 = document.createComment("This is just a comment.");
+        console.log(element4);
+        document.write(element4);
+
+
+        //AppendChild 
+
+        //appendChild always append thing at last 
+
+        // [ tag<p></p> ]      <-- appendChlid --         [ text"This is just a text." ]
+
+        element2.appendChild(element3);
+        console.log(element2);
+        //<h2>This is just a text.</h2>
+
+        var element6 = document.getElementById("append").appendChild(element2);
+        console.log(element6);
+
+
+        //InsertBefore
+        //if we want to append thing between something or not at last place we can use insertbefore
+
+        var target = document.getElementById("append");
+        target.insertBefore(element2, target.childNodes[0]);
+    </script>
+</body>
+</html>

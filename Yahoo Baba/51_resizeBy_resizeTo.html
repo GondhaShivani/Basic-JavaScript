@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    
+        <h1>resizeBy(left, right)</h1>
+        <h1>resizeTo(left, right)</h1>
+
+        <img src="51_resizeBy.png" width="400px">
+
+        <br>
+        <button onclick="openwindow()">Open Window</button>
+    
+        <button onclick="resizeTowindow()">resizeTo Window</button>
+
+        <button onclick="resizeBywindow()">resizeBy Window</button>
+
+        
+        <script>
+    
+            var mywindow;
+    
+            function openwindow() {
+                mywindow = window.open("", "", "width=500px,height=200px, left=300px, top=300px");
+                mywindow.document.write("<p>Lorem ipsum, dolor sit ipsam alquam.</p>");
+            }
+    
+            function resizeTowindow() {
+                mywindow.resizeTo(400, 400);
+            }
+
+            function resizeBywindow(){
+                mywindow.resizeBy(100, 100);
+            }
+    
+        </script>
+    </body>
+    </html>
+    

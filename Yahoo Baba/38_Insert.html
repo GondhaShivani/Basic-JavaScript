@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Navigation</title>
+    <style>
+        #test{
+            background: burlywood;
+            width: 800px;
+            height: 400px;
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam eos vel consequatur. Delectus voluptas
+        dolorem id exercitationem, ad ipsam consectetur hic ullam provident! Adipisci exercitationem ipsam rerum sunt
+        doloremque magni soluta, delectus maiores, sapiente quasi labore praesentium accusamus earum cum nam saepe qui?
+        Accusamus provident quo perferendis sint sed.</p>
+        <p>
+            insertAdjacentElement<br>
+            insertAdjacentHTML<br>
+            insertAdjacentText<br>
+        </p>
+    </div>
+    <hr>
+
+    <img src="38_1_insert.png" width="400px">
+    <img src="38_2_insert.png" width="400px">
+
+
+    <script>
+        //createElement
+        var newElement = document.createElement("h2");
+
+        //createTextNode
+        var newText = document.createTextNode("This is just a text");
+
+        //appendChild
+        newElement.appendChild(newText);
+
+        //insertAdjacentElement
+        var target = document.getElementById("test");
+
+        //1
+        //target.insertAdjacentElement("beforebegin", newElement);
+
+        //2
+        //target.insertAdjacentElement("afterbegin", newElement);
+
+        //3
+        //target.insertAdjacentElement("afterend", newElement);
+
+        //4
+        target.insertAdjacentElement("beforeend", newElement);
+
+
+
+        //insertAdjacentHTML
+        var target1 = document.getAnimations("test");        var newElement1 = "<h2>This is heading 2 </h2>";
+
+        target.insertAdjacentHTML("afterbegin", newElement1);
+
+
+        //insertAdjacentText
+        var target2 = document.getElementById("test");
+        var newText2 = "This is New Text.";
+        target2.insertAdjacentText("beforeend", newText2); 
+
+    </script>
+</body>
+</html>

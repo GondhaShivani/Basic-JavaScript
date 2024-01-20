@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript</title>
+  <script>
+    var now = new Date();
+                
+    document.write("ToDateString Method Example");
+	document.write(now.toDateString() + "<br><br>");
+	
+	/* GetDate Method */
+    document.write("");
+	document.write(now.getDate() + "<br><br>");
+	
+    document.write("GetFullYear Method ");
+	document.write(now.getFullYear() + "<br><br>");
+
+    document.write("GetMonth Method ");
+	document.write(now.getMonth() + "<br><br>");
+
+    document.write("GetDay Method ");
+	document.write(now.getDay() + "<br><br>");
+
+    document.write("GetHours Method ");
+
+	document.write(now.getHours() + "<br><br>");
+
+    document.write("GetMinutes Method ");
+	document.write(now.getMinutes() + "<br><br>");
+
+    document.write("GetSeconds Method ");
+	document.write(now.getSeconds() + "<br><br>");
+
+    document.write("GetMilliseconds Method ");
+	document.write(now.getMilliseconds() + "<br><br>");
+	
+
+    document.write("setDate Method ");
+	now.setDate(20);
+  
+    document.write("setFullYear Method ");
+	now.setFullYear(2020);
+
+    document.write("setFullYear Method ");
+	now.setMonth(4);
+
+    document.write("setHours Method ");
+	now.setHours(14);
+	
+	document.write(now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear());
+  </script>
+</head>
+<body>
+</body>
+</html>

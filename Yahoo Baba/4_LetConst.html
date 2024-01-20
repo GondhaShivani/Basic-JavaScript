@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //------------------let
+        var a = 100;
+        var a = 30;  //you can redeclare var
+        document.write(a + "<br>");
+
+        let x = 3;
+        //let x = 4;  //you can't redeclare var
+        x = 5;      //you can only overwrite.
+        document.write(x + "<br>");
+
+        //-------------------const
+        //you can not overwrite it bcz it's constant.
+        const y = 40;
+        //y = 49;       //typerError: assignment to const variable.
+        //const y = 75;   //syntex error: 'y' has already been declared
+        document.write(y);
+
+    </script>
+
+</head>
+<body>
+    <h1>var let const</h1>
+    <img src="var_let_const_difference.png" width="500px">
+</body>
+</html>

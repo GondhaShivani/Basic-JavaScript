@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        onfocus : styling focused tag or attribute<br>
+        onblur : remove applied styling from onfocus<br>
+        oninput : add div that print entered value of text (directly triggered after writing text)<br>
+        onchnage : add div that print entered value of text (triggered after unfocus writing text)<br>
+        onselect : when we select any value of attribute or tag it will return any action. like console msg print or else.
+    </p><br><br>
+
+    <form action=""  onsubmit="submitfunction()">
+        <label for="">Name</label>
+        <input type="text" id="name" value="type name" onfocus="focusFunc(this)" onblur="blurfunc(this)" onchange="changefunction(this)" onselect="selectfunction()"  required oninvalid="alert('please fill out details of Name...')"><br><br>
+
+        <label for="">Class</label>
+        <input type="text" id="class" onfocus="focusFunc(this)" onblur="blurfunc(this)" onchange="changefunction(this)" onselect="selectfunction()" required oninvalid="alert('please fill out details of class...')"><br><br>
+        <!--required throw an html msg.
+        by JS - oninvalid-->
+
+        <label for="">Country</label>
+        <select id="country" onfocus="focusFunc(this)" onblur="blurfunc(this)" onchange="changefunction(this)" onselect="selectfunction()" >
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="SriLanka">SriLanka</option>
+            <option value="Nepal">Nepal</option>
+        </select><br><br>
+
+        <input type="submit" id="submit">
+    </form>
+
+    <div id="test" style="border: 2px solid cadetblue;"></div>
+
+    <script>
+
+        /* //only can apply on name
+        function focusFunc(){
+            document.getElementById("name").style.backgroundColor = "pink";
+        } */
+
+        function focusFunc(element){
+            element.style.background = "pink";
+        }
+
+        function blurfunc(element)
+        {
+            element.style.background = "";
+        }
+
+        function changefunction(element){
+            var x = element.value;
+            document.getElementById("test").innerHTML = x;
+        }
+
+        function selectfunction(){
+            console.log("some text selected.");      
+        }
+
+        function submitfunction(){
+            var abc = document.getElementById("name");
+            alert("Hello " + abc);      
+        }
+    </script>
+</body>
+</html> 

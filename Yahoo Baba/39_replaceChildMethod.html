@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>replaceChild(newElement,oldElement)</h1>
+    <ul id="list">
+        <li>Banana</li>
+        <li>grapes</li>
+        <li>apple</li>
+        <li>orange</li>
+        <li>jamun</li>
+    </ul>
+    //replace apple with guava
+
+
+    <script>
+
+        //replaceChild
+        var newElement = document.createElement("li");
+        var newText = document.createTextNode("guava");
+
+        newElement.appendChild(newText);
+
+        var target = document.getElementById("list");
+
+        var oldElement = target.children[2];
+
+        console.log(oldElement);
+
+        target.replaceChild(newElement, oldElement);
+
+
+
+        //removeChild (orange)
+        var target = document.getElementById("list");
+
+        var removeElement = target.children[3];
+
+        console.log(oldElement);
+
+        target.removeChild( removeElement);
+    </script>
+</body>
+</html>

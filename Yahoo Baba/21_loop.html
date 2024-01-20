@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //----------------while
+        var a=1;
+        document.write("<ul>");
+        while(a<=10){
+            document.write("<li>Hello</li>");
+            a++;
+        }
+        document.write("</ul>");
+
+        //----------------do while
+        var a =1;
+        document.write("<ol>");
+
+        do{
+            document.write("<li>Hey <br></li>");
+            a++;
+        }while(a<=10)
+
+        document.write("<ol>");
+        document.write("<br>");
+
+        //----------------for
+        for(var i=0; i<5; i++){
+            document.write
+            ("Jay Dwarkadhish<br>");
+        }
+        document.write("<br><br>");
+
+        //------even/odd
+        for(var i=0;i<10;i++){
+            if(i%2 == 0){
+                document.write(`${i}=Even<br>`);
+            }
+            else{
+                document.write(`${i}=Odd<br>`);
+            }
+        }
+        document.write("<br>");
+
+        //----------Nested Loop
+        for(var a=1; a<=100; a=a+10){
+            for(var b=a; b<a+10; b++){
+                document.write(b + "  ");
+            }
+            document.write("<br><br>");
+        }
+
+        //pattern 1
+        for (var a = 1; a <= 5; a++) 
+        {
+            for (var b = 1; b <= a; b++) 
+            {
+                document.write(b + " ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+
+
+        //pattern 2
+        for (var a = 1; a <= 5; a++) 
+        {
+            for (var b = 1; b <= a; b++)
+            {
+                document.write(a + " ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+
+        //pattern 3
+        for (var a = 5; a >= 1; a--) 
+        {
+            for (var b = 1; b <= a; b++)
+            {
+                document.write(a + " ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+
+        //pattern 4
+        for (var a = 5; a >= 1; a--) 
+        {
+            for (var b = a; b >= 1; b--)
+            {
+                document.write(b + " ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br><br>");
+
+
+    </script>
+</body>
+</html>
