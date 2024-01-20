@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 10;
+        margin: 10;
+      }
+
+      body {
+        background-color: beige;
+        text-align: center;
+      }
+
+      .para {
+        color: rgb(180, 9, 14);
+        align-items: center;
+        display: grid;
+        text-align: center;
+      }
+
+      #heading {
+        color: blue;
+        text-align: center;
+        display: grid;
+      }
+
+      .button {
+        cursor: pointer;
+        background-color: rgb(221, 233, 82);
+        width: 100px;
+        height: 40px;
+        align-self: center;
+      }
+
+      .form {
+        padding: 80;
+        margin: 80;
+        color: rgb(14, 14, 112);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="para">para1 Hello</p>
+    <p class="para">para2 Hello again</p>
+    <p style="text-align: center">Normal para</p>
+    <!-- can access by using getElementByTagName -->
+    <h1 id="heading">click to change heading !!</h1>
+
+    <button class="button" onclick="changeHeading()">Click me :)</button>
+
+    <br /><br />
+
+    <form action="" class="form">
+      <label for="">Male</label>
+      <input type="radio" name="gender" id="" />
+
+      <label for="">Female</label>
+      <input type="radio" name="gender" id="" />
+
+      <label for="">Male-Female</label>
+      <input type="radio" name="gender" id="" />
+    </form>
+  </body>
+  <script>
+    const changeHeading = () => {
+      //document.getElementById("heading").innerHTML = "changed....";
+
+      console.log(
+        document.getElementsByClassName("para")
+      ); /* HTMLCollection(2) [p.para, p.para] */
+
+      console.log(
+        document.getElementsByTagName("p")
+      ); /* HTMLCollection(3) [p.para, p.para, p] */
+
+      console.log(
+        document.getElementsByName("gender")
+      ); /* NodeList(3) [input, input, input] */
+
+      /* by using querySelector */
+      document.querySelector("#heading").innerHTML = "changed again....";
+
+      //if we use class para then 2 elements having para -> but querySelector only modify 1st matching element.
+      document.querySelector(".para").innerHTML = "chnaged using query";
+
+      //querySelectorAll returns all element = how many element under class
+      console.log(document.querySelectorAll(".para")); // NodeList(2) [p.para, p.para]
+      console.log(document.querySelectorAll("#heading")); // NodeList [h1#heading]
+    };
+  </script>
+</html>

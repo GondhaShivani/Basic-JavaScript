@@ -1,0 +1,38 @@
+* {
+  background-color: rgb(4, 4, 82);
+}
+
+.main-heading {
+  color: white;
+  text-align: center;
+  place-items: center;
+  display: grid;
+}
+
+#heading {
+  font-size: 60px;
+}
+
+#btn1 {
+  background-color: rgb(229, 136, 50);
+  color: rgb(0, 0, 0);
+  width: 160px;
+  padding: 15px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: large;
+}
+
+#btn2 {
+  background-color: rgb(229, 136, 50);
+  color: rgb(0, 0, 0);
+  width: 160px;
+  padding: 15px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: large;
+}
+
+#myImage {
+  width: 200px;
+}

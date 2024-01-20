@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        cursor: pointer;
+      }
+      body {
+        padding: 50px;
+        background-color: pink;
+      }
+      div {
+        padding: 40px;
+        background-color: rgb(107, 221, 79);
+        width: fit-content;
+      }
+      span {
+        padding: 30px;
+        background-color: skyblue;
+        display: block;
+      }
+      button {
+        padding: 20px;
+        background-color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      if u don't mention anything different then by default it's "Event
+      Bubbling"
+    </h1>
+    <p>
+      -if you don't want propagation then in child you can write
+      stopPropagation. -addEventListener have 3 arguments -> 1. "event" 2.
+      function 3. boolean (bydeafult - false - bubbling phase) -if true then
+      capturing phase.
+    </p>
+    <p>body</p>
+    <div>
+      <p>div</p>
+      <span>
+        <p>span</p>
+        <button>Click Me!</button>
+      </span>
+    </div>
+  </body>
+
+  <!-- bubbling phase script -->
+  <script>
+    const body = document.getElementsByTagName("body")[0];
+    const div = document.getElementsByTagName("div")[0];
+    const span = document.getElementsByTagName("span")[0];
+    const button = document.getElementsByTagName("button")[0];
+
+    body.addEventListener("click", () => {
+      console.log("Entered in Body");
+    });
+    div.addEventListener("click", () => {
+      console.log("Entered in div");
+    });
+    span.addEventListener("click", () => {
+      console.log("Entered in span");
+    });
+    button.addEventListener("click", () => {
+      console.log("Entered in button");
+      //event.stopPropagation();
+    }); //capturing // parent 1st
+  </script>
+  <!-- 
+  -------------------------capturing phase script 
+  <script>
+    const body = document.getElementsByTagName("body")[0];
+    const div = document.getElementsByTagName("div")[0];
+    const span = document.getElementsByTagName("span")[0];
+    const button = document.getElementsByTagName("button")[0];
+
+    body.addEventListener(
+      "click",
+      () => {
+        console.log("Entered in Body");
+      },
+      true
+    );
+    div.addEventListener(
+      "click",
+      () => {
+        console.log("Entered in div");
+      },
+      true
+    );
+    span.addEventListener(
+      "click",
+      () => {
+        console.log("Entered in span");
+      },
+      true
+    );
+    button.addEventListener(
+      "click",
+      () => {
+        console.log("Entered in button");
+        //event.stopPropagation();
+      },
+      true
+    ); //capturing // parent 1st
+  </script> -->
+</html>
