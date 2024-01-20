@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>EventChallenge_23</h1>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Ex ipsam alias autem voluptate nisi incidunt, tenetur fuga, quisquam </p>
+    <p>sit minima nam. Eveniet porro obcaecati deserunt sit pariatur sequi.</p>
+    <button>Tap for Green paragraph</button>
+
+<script>
+
+    var para = document.querySelectorAll('p');
+    var btn = document.querySelector('button');
+
+    //1
+    /* 
+    btn.addEventListener('click', function(){
+        for(var i=0; i<para.length; i++){
+            para[i].style.color = 'green';
+        }
+    }); 
+    */
+
+    //2
+    btn.onclick = function(){
+        for(var i=0; i<para.length; i++){
+            para[i].style.color = 'green';
+        }
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>EventChallenge_24</h1>
+
+    <div>
+        <p>
+            Fisrt Paragraph Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi commodi?
+        </p>
+    </div>
+    <button>Add a Paragraph</button>
+
+    <script>
+
+        var mydiv = document.querySelector('div');
+        var btn = document.querySelector('button');
+
+        btn.onclick = function(){
+
+            var count = 0;
+            var newPara = document.createElement('p');
+            var paraText = document.createTextNode(`This is new Paragraph.`);
+
+            newPara.appendChild(paraText);
+            mydiv.appendChild(newPara);
+
+        }
+    </script>
+</body>
+</html>

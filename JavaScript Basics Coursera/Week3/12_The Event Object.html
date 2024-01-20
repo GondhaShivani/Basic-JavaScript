@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+
+    <h1>The Event Object</h1>
+
+    <button>Don't press me</button><br>
+
+    <h1>Preventing Default Behaviour</h1>
+
+    <a href="http://google.com">Link to Google !</a>
+
+    <script>
+        //The event object can be passed into the function that runs when an event listener happens, and it's a very useful object to have access to.
+        var btn = document.querySelector('button');
+
+        btn.addEventListener( 'click', function(event){  
+        //event is object here -> you can give any name to object -> event, evt, e, buttonClicked, something else too.
+            
+            event.target.style.backgroundColor = "red";
+            //The event.target will say what is the thing that triggered this event? Event.target.style.backgroundcolor
+
+            alert("I told you not to press me !!"); 
+        } ); 
+
+        //preventDefault
+        var link = document.querySelector('a');
+        link.addEventListener('click', function(event){
+            //event.preventDefault(); 
+            //If I were comment this line out here, I get the sorry, no Google for you, but then it'll actually go to Google because the event.preventDefault is needed in order to keep that default event from happening.
+
+            alert("sorry! no google for you...");
+        })
+
+    </script>
+    
+</body>
+</html>

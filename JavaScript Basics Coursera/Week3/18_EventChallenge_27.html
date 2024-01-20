@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>Challenge_27</h1>
+    <h1>Heading</h1>
+    <form>
+        <label>Enter a Number : <input type="number"></label>
+        <input type="submit" value="send number">
+    </form>
+
+    <script>
+        var h1tag = document.querySelector[1];
+        var formtag = document.querySelector('form');
+
+        formtag.addEventListener('submit', function(event){
+            event.preventDefault();
+            var myNum = parseInt(document.querySelector('input').value);
+
+            if(myNum){
+                h1tag.style.fontSize = myNum + "px";                
+                //console.log('hello');
+            }
+            else{
+                alert('please enter a valid number');
+            }
+        });
+    </script>
+</body>
+</html>

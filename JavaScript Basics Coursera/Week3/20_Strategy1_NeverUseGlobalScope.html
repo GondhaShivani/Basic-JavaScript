@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    
+    <h1>Startegy1</h1>
+
+    <h4>The first strategy was to use some closure with name spacing to make sure that variables stay out of the global scope.</h4>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, unde.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, unde.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, unde.</p>
+
+    <script>
+/*
+        //1
+        var myPs = document.querySelectorAll("p");
+
+        for(var i=0; i <myPs.length; i++){
+            myPs[i].style.color = "red";
+        }
+
+        console.log(myPs);//can access it
+
+        //here myPs and i both variable is global, its problematic we can use 
+        //IIFE - immediately invoked function expression 
+*/
+
+        //2
+        //syntex : (function(){code...}())
+        (function(){
+            var myPs = document.querySelectorAll("p");
+
+            for(var i=0; i <myPs.length; i++){
+                myPs[i].style.color = "blue";
+        }
+        }());
+        console.log(myPs);//can't access it 
+
+        //This is also called namespacing because we are. Making sure that the space for the name for this variable is set to that it's within this function. So that's actually a namespacing thing.
+        //Any function in JavaScript is a closure.
+    </script>
+
+</body>
+</html>

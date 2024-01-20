@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>EventChallenge_22</h1>
+    
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi dicta cumque illo natus maiores adipisci nemo architecto facilis debitis quos, officia consequuntur aut, reprehenderit ab odio consectetur incidunt itaque in.</p>
+    <button>Tap for Green paragraph</button>
+
+    <script>
+        var para = document.querySelector('p');
+        var btn = document.querySelector('button');
+
+        //1
+        btn.addEventListener('click', function(){
+            para.style.color = 'green';
+        });
+
+        OR
+
+        //2
+        btn.onclick = function(){
+            para.style.color = 'green';
+        }
+</script>
+</body>
+</html>

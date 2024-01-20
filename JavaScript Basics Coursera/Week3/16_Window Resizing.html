@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+ </head>
+ <body>
+    <h1>Window Resizing</h1>
+    <script>
+
+    // we have a tool that we can use to find out how wide our window is and how tall our window is. And this is extremely useful in JavaScript. And the resize event can be very useful too if you're doing something with responsive design.
+    window.addEventListener('resize', function(){
+        console.log(`The window Width is ${window.innerWidth}`);
+        console.log(`The window Height is ${window.innerHeight}`);
+    })
+
+    </script>
+ </body>
+ </html>

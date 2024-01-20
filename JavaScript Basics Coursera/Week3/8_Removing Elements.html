@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>Removing Elements</h1>
+    <div>
+        //child[0] 
+        <p>This is first paragraphin the page.</p>
+
+        //child[1] 
+        //remove paragraph.
+        <p>Remove This paragraph.</p>
+    </div>
+
+    <script>
+        var myDiv = document.querySelector('div');
+        myDiv.removeChild(myDiv.children[1]);
+
+    </script>
+</body>
+</html>

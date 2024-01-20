@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>Event Listeners</h1>
+    <button>Click Me</button>
+    <script>
+        //notice the difference between the two. The onclick property is a property because it's onclick and then an equal sign in what you're assigning to it. With addEventListener. It's a method because. Because it's got parentheses, we're going to pass in a click. That's the event we're really listening for.
+    
+    //1
+        /* var btn = document.querySelector('button');
+        function ouch(){
+            alert("button clicked");
+        }
+        btn.addEventListener('click',ouch); */
+
+    //2
+        //by using anonymous function
+        var btn = document.querySelector('button');
+        btn.addEventListener( 'click', function(){ alert("button clicked"); } );
+
+    //Question
+        /* 
+        What is the difference between these two event handlers?
+        document.getElementById('myform').onsubmit = process;
+        document.getElementById('myform').addEventListener('submit', process);
+        Select all that apply.
+
+
+        [A] An element can listen for more than one event when attached via the addEventListener method, but can only have one event property on it at a time.
+        Correct-This is an important difference between the two approaches.
+
+        [B]onsubmit is an event property, and the addEventListener is a method.
+        Correct-It is important to understand the difference between properties and methods, even though sometimes they do similar things.
+
+        [C] The event property should be used with inline JavaScript, and the addEventListener method should be used in script tags.
+        False
+
+        [D] The event property is an older way of doing things and does not work on newer browsers.
+        False
+
+        [E] The event listener can be removed via the removeEventListener method, whereas the event property can only be removed by replacing that event property with a different one.
+        Correct-This is another important difference between the two methods. */
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+    <!--     
+        Points ::   
+        
+        Document Object Model.<br>
+        the webpage is an object.<br><br>
+
+        show : [ Dom image ]<br>
+        show : [ Node Relationship image ]<br><br>
+
+        The dot syntax and methods. Notice we use dots or periods to separate objects from their properties or their methods in JavaScript. 
+        On the right here, you can see that we have a number of methods that are related to being able to traverse the DOM or affect the DOM.
+        1. insertBefore(), we can create an element and insert it before another element.
+        2.  replaceChild(), We can replace a child. We could say, "Take this child out of here." 
+        3. removeChild() - Remove a child. 
+        4. appendChild(). We can add a new paragraph to the end of a div or something like that. 
+        5. cloneNode(). We could take an entire div with all its contents and clone it and add it to the page somewhere else. 
+        6. createElement() We can create an element, 
+        7. createAttribute() we can create attributes, 
+        8. createTextNode() we can create a text node. 
+        These are all methods that JavaScript has built into it that will allow us to do things to the Document Object Model; to the document itself and will affect the document there. 
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week3</title>
+</head>
+<body>
+    <h1>JS and DOM</h1>
+
+    <p id="one">Here is some text</p>
+
+    <script>
+
+    //--------------------------------------- getElementById --------------------------------------
+
+    //getElementById is a document method or a function that belongs to the document object.
+        
+        document.getElementById("one").style.color = "blue";
+
+    //What we can use with getElementById, is we can pass in a particular ID, and then we can do things to that element, that will go into our document, into our DOM or Document Object Model and find that particular element and do something with it. We could set the style property and the color sub-property to blue.
+
+    //this is a really great example of a document method, getElementById, which is allowing us to go into our document, find that ID, and then effect it on the page.
+
+    </script>
+</body>
+</html>

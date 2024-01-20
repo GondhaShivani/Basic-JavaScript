@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>scope in JS</h1>
+
+    <script>
+        var aVar = "this is in global space.";
+
+        function scopetest(){
+            var aVar = "this is in local space.";
+            console.log(aVar);
+        }
+
+        scopetest();
+
+        console.log(aVar);
+
+
+        //if make a variable and forget to use the var keyword, that variable automatically becomes part of the global scope. we can access it out of the function also.
+        function scopetest2(){
+            name = "shivani" ;
+            //var name = "shivani"; //then we can't access it out of the function.
+            console.log(name);
+        }
+
+        scopetest2();
+        console.log(name);
+
+    </script>
+</body>
+</html>

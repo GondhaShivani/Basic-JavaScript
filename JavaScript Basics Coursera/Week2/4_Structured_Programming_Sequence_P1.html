@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week - 2</title>
+</head>
+<body>
+    <h1> Structured Programming, Sequence - Part 1 </h1>
+
+    <p>
+
+        <h3>Points : </h3>
+1. <br>
+Sequence, 1st, you do this, then you do that, finally, you do this over here. With JavaScript, you start at the top of the script and you work your way down the script and JavaScript does everything in the script one thing at a time in a sequence. <br><br>
+
+2. <br>
+With selections, we're checking to see if some condition is met. If this is true, do this, otherwise, do that. <br><br>
+
+3.  <br>
+Then with loops, while a condition is true, we're going to continue to do something. <br><br>
+
+4.   <br>
+Sequence, selection, and loop
+Correct
+These three structures control the flow of logic in modern programming languages. <br><br>
+    </p>
+    <script>
+        /* //---------------------------------------ex1 string
+        var string = "I Am Hungry";
+
+        //1
+        console.log(string);
+
+        //2
+        var Ustring = string.toUpperCase();
+        var Lstring = string.toLowerCase();
+
+        //3
+        console.log(Ustring);
+        console.log(Lstring);
+
+        //4
+        var hungryLocation = string.search('Hungry');  //return starting index
+
+        //5
+        var specialword = string.substr(hungryLocation, 6);
+        //console.log(specialword);  //Hungry
+
+        //6
+        specialword = specialword.toUpperCase(); //HUNGRY
+
+        //7
+        var newString = string.replace('Hungry', specialword);
+
+        //8
+        console.log(newString);  //I Am HUNGRY
+
+        //this is sequence JS do all in sequence one by another.
+
+        //---------------------------------------ex2 Loop - string
+
+        var food = [ 'cheese', 'bread', 'butter', 'fruits', 'fastfood'];
+
+        console.log("----BY FOR LOOP----");
+        for(var i=0; i<food.length; i++)
+        {
+            console.log(`${string} - ${food[i]}`);
+        }
+
+        console.log("----BY FOR OF LOOP----");
+        for(var eachfood of food)
+        {
+            //console.log(eachfood); //print all food array
+            console.log(`${string} - ${eachfood}`);
+        } */
+
+        //---------------------------------------ex2 Loop + SELECTION
+
+        var string = "I Am Hungry";
+        var food = [ 'cheese', 'bread', 'butter', 'fruits', 'fastfood'];
+
+        for(var i=0; i<food.length; i++){
+            var remainder = i % 2;
+            if(remainder === 0)
+            {
+                var foodupper = food[i].toUpperCase();
+                console.log(`${string} - ${foodupper}`);
+            }
+            else{
+                var foodlower = food[i].toLowerCase();
+                console.log(`${string} - ${foodlower}`);
+            }
+        }
+
+        //refoctoring The Code.
+        //In short line of code.
+        for(var i=0; i<food.length; i++){
+
+            //checking if even
+            if(i%2 === 0)
+            {
+                //even = uppercase
+                console.log(`${string} - ${food[i].toUpperCase()}`);
+            }
+            else
+            {
+                //odd = lowercase
+                console.log(`${string} - ${food[i]}`);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

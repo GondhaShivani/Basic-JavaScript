@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week - 2</title>
+</head>
+<body>
+    <h1>More on Functions</h1>
+
+    <p>
+    1. that functions in JavaScript can be anonymous. <br>
+    2. functions are first-class citizens in JavaScript. Which means, you can assign a function to a variable, the way you could assign a string to a variable or a number to a variable. In fact, you can use a function wherever you can use data in JavaScript, and it's one of the very powerful features of JavaScript. <br>
+    3. You can actually assign a function to a variable, and that function doesn't have to have a name. It can be nameless, it can be anonymous. <br>
+    </p>
+
+    <script>
+
+        /* //-------------------------------------------------ex1 function expression
+        var greeting = function(){
+            console.log("good morning");
+        }
+        greeting();
+
+        //functions are first class citizens in JS that we were able to assign a function to a variable just as if it were data. */
+
+        /* //-------------------------------------------------ex2
+        var greeting = "Hello, Good Morning !!";
+
+        function uppercase(anystring){
+            anystring = anystring.toUpperCase();
+            return anystring;
+        }
+
+        var upperVar = function(anystring){
+            anystring = anystring.toUpperCase();
+            return anystring;
+        }
+
+        var arrowUpper = anystring => anystring.toUpperCase();
+
+        console.log( uppercase(greeting) );
+        console.log( upperVar(greeting) );
+        console.log( arrowUpper(greeting) ); */
+
+        //-------------------------------------------------ex3
+        //functions and methods in JS
+        //when you have a function that belongs to an object, it's called a method.
+        //everything is an object so in that sense, every function belongs to an object of one sort or another.
+        //But in reality, in JavaScript all functions are methods. So the two terms really are interchangeable. 
+
+        function printString(){
+
+            var string = "I am hungry";
+            var Ustring = string.toUpperCase();
+            console.log(string);  
+            console.log(Ustring);
+            }
+        
+        window.printString();
+
+    </script>
+    
+</body>
+</html>

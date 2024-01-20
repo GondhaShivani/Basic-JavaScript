@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week - 2</title>
+</head>
+<body>
+    <h1>Functions Challenges</h1>
+
+    <script>
+        /* //---------------------------------------------------------c10
+        function hello(){
+            console.log("Hello, Good Morning");
+        }
+        hello(); */
+
+        /* //---------------------------------------------------------c11
+        function hello(name){
+            console.log(`Hello ${name}, Good Morning`);
+        }
+        hello('shivi'); */
+
+        //-------------------------------------------------------------c12
+        /* var name = prompt("Enter your name : ", "");
+        function hello(){
+            console.log(`Hello ${name}, Good Morning`);
+        }
+        hello(); */
+
+        /* //you can pass as parameter also.
+        var name = prompt("Enter your name : ", "");
+        function hello(enteredPromptName){
+            console.log(`Hello ${enteredPromptName}, Good Morning`);
+        }
+        hello(name); */
+
+        /* //-------------------------------------------------------------c13
+        var yourname = prompt('Enter your name : ', '');
+        function hello(name)
+        {
+            if(name == null || name == '')
+            {
+                console.log("You didn't give me your name");
+            }
+            else
+            {
+                console.log(`Hello ${name}, Good Morning`);
+            }
+        }
+        hello(yourname); */
+
+        /* //-------------------------------------------------------------c14
+        var yourname = prompt('Enter your name : ', '');
+        function hello(name){
+
+            var greeting;
+            if(name == null || name == ''){
+                greeting = "You didn't give me your name"
+            }
+            else{
+                greeting = `Hello ${name}, Good Morning`;
+            }
+            return greeting;
+        }
+        console.log(hello(yourname)); */
+
+        //-------------------------------------------------------------c15
+
+        /* var yourname = prompt('Enter your name : ', '');
+        var food = ['butter', 'cheese', 'fruit', 'fastfood'];
+
+        function hello(name)
+        {
+            var greeting;
+            if(name == null || name == ''){
+                greeting = "You didn't give me your name"
+            }
+            else{
+                greeting = `Hello ${name}, Good Morning`;
+            }
+            return greeting;
+        }
+
+        function hospitality( name, gift ){
+            console.log( hello(name) );
+            for(var i=0; i<gift.length; i++)
+            {
+                console.log(`${name}, here is your gift ${gift[i]} `);
+            }
+        }
+        hospitality( yourname, foods ); */
+
+        //-------------------------------------------------------------c16
+        var yourname = prompt('Enter your name : ', '');
+        var food = ['butter', 'cheese', 'fruit', 'fastfood'];
+
+        function hello(name)
+        {
+            var greeting;
+            if(name == null || name == ''){
+                greeting = "You didn't give me your name"
+            }
+            else{
+                greeting = `Hello ${name}, Good Morning`;
+            }
+            return greeting;
+        }
+
+        function randomInt( min,max )
+        {
+            return Math.floor( (max - min + 1) * Math.random() ) + min;
+        }
+
+        function hospitality( name, gift ){
+            console.log( hello(name) );
+            var randomgift = gift[ randomInt(0, 3) ];
+            console.log(`${name}, here is your gift ${randomgift} `);
+        }
+
+        hospitality( yourname, food );
+
+
+    </script>
+</body>
+
+
+</html>

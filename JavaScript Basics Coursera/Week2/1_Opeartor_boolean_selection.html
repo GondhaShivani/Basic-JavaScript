@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week - 2</title>
+</head>
+<body>
+    <h1> Selections !! </h1>
+    <script>
+
+    /*------------------------------------------------points:
+    - JS is loosly typed language.
+    - false, undefined, null, NaN, 0 this things all come up with false in JS.
+    */
+
+//ex1---------------------------------------------boolean - selection
+    /*
+    var happy = true;
+    var sad = false;
+    
+    if(happy)
+    {
+        console.log("statement is true.");
+    }
+    else{
+        console.log("statement is false.");
+    }
+    */
+
+//ex2---------------------------------------------boolean - selection
+    /*
+    //here green is undefined variable -> undefined resolves false in JS.
+    var red = true;
+    var blue = false;
+    var green1;            //false
+    var green2 = null;     //false
+    var green3 = 0;        //false
+
+    if(green)
+    {
+        console.log("statement is true.");
+    }
+    else{
+        console.log("statement is false.");
+    }
+    */
+
+//ex3-------------------------------------------comaparing values
+    /*
+    var color1 = 'blue';
+    var color2 = 'blue';
+
+    //if(color1 == color2) //equals
+    if(color1 != color2) //different
+    {
+        console.log("both are same.");
+    }
+    else{
+        console.log("both are different.");
+    }
+    */
+
+//ex4-------------------------------------------comaparing values
+    /*
+    var num = 5;
+    var notNum = '5';  //here 5 is a string
+
+    if(num === notNum)  
+    {
+        console.log("both are same.");  //bcz JS is loosly typed langyage it allows for something called type coercion. so we are come up with ===.
+    }
+    else{                                   // === -> check if(num is exactly the same as notNum)
+        console.log("both are different."); //in === output -> both are different
+    }                                       //=== won't do type coercion.
+    */
+
+//ex5-------------------------------------------comaparing values
+    var myNum = 5
+    var notNum = "chicken";
+    var value = notNum - myNum;  //not make sence
+
+    if(value)
+    {
+        console.log("statement is true.");
+    }
+    else{
+        console.log("statement is false.");
+        console.log(value);  //NaN - not a number - NaN is another thing in JS that is falsy.
+    }
+
+    //------------------------------------------------Question
+    /*
+que. Which of the following variables will evaluate to TRUE? Select all that apply.
+
+[A] var name;
+empty is false.
+
+[B] var happy = true;
+Correct
+JavaScript understands the word true.
+
+[C] var unhappy = “false”;
+Correct
+Because false is inside quotes, it is a string and will evaluate to true.
+
+[D] var myNum = -1;
+Correct
+A negative number evaluates to true.
+
+[E] var myNum = 15;
+Correct
+A positive number evaluates to true.
+*/
+
+    </script>
+
+</body>
+</html>

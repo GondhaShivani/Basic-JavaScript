@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>getElementsByClassName</h1>
+
+    <!--  ----------------------ex1---------------------------------  -->
+    <p class="special">Here is some text.</p>
+    <p>Here is some more text.</p>
+    <p class="special">Here is even some more text.</p> <hr>
+
+    <p class="text">Here is some text.</p>
+    <p>Here is some more text.</p>
+    <p>Here is even some more text.</p>
+
+    <script>
+    //------------------------------------ getElementsByClassName --------------------------------
+
+    var myClass = document.getElementsByClassName('special');
+
+    for ( var i=0; i<myClass.length; i++ )
+    {
+        myClass[i].style.color = "red";
+        //alert(`showing paragraph ${i}`);
+    }
+
+    //if only one element chnage by class
+    //then no need of loop.
+    var myClass = document.getElementsByClassName('text');
+    myClass[0].style.color = "blue";
+
+    //But the important thing here to understand is that if you're using getElementsByClassName or getElementsByTagName or anything else that gives you a collection of elements, you have to go in and treat it as if it's a collection because that's what it is, and not just as an individual element.
+    
+    </script>
+</body>
+</html>

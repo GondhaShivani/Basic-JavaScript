@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week - 2</title>
+</head>
+<body>
+    <h1>Loop</h1>
+    <script>
+
+    /* //------------------------------------------------ex1 for loop
+    for( var i=1; i<11; i++)
+    {
+        console.log(i);
+    }  */
+
+    /* //---------------------------------------------------ex2 array
+    var colors = ['red', 'yellow', 'orange', 'green', 'blue', 'purple'];
+    for( var i=0; i<colors.length; i++)
+    {
+        console.log(colors[i]);
+    } */
+
+    /* //------------------------------------------------ex3 for of loop
+    var colors = ['red', 'yellow', 'orange', 'green', 'blue', 'purple', 'pink'];
+    for(var eachColor of colors){
+        console.log(eachColor);
+    }
+
+    var food = ['food1', 'food2', 'food3'];
+    for(var iteam of food){
+        console.log(iteam);
+    } */
+
+/*  //---------------------------------------------ex4 string with array
+    var statement = "a string treated like an array";
+    console.log("by for loop");
+    for(var i=0; i<statement.length; i++)
+    {
+        console.log(statement[i]);  //print each letter.
+    }
+
+    console.log('\n' + "by for of loop");
+    for(var eachletter of statement)
+    {
+        console.log(eachletter);   
+    } */
+
+    /* //---------------------------------------------ex5 while loop
+    var incrementor = 1;
+    var text = "";
+    while(incrementor < 11){
+        text += "incrementor has gone upto" + incrementor + '\n';
+        text += `incrementor has gone upto ${incrementor} \n`;
+        incrementor++;
+    }
+    console.log(text); */
+
+    var i=0;
+    var text = "";
+    while(i<5)
+    {
+        text += ` The square of ${i} is = ${i * i} \n `;
+        i++;
+    }
+    console.log(text);
+
+
+    </script>
+</body>
+</html>

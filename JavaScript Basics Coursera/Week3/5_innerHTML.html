@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>innerHTML</h1>
+    <div id="special">
+        <p>Here is some text.</p>
+        <p>Here is some more text.</p>
+        <p>Here is even some more text.</p>
+    </div>
+
+    <script>
+        
+        var myDiv = document.getElementById('special');
+        myDiv.innerHTML = " <p>Here is my new Paragraph</p> ";
+
+        //OR
+
+        var myDiv = querySelector('#special');
+        myDiv.innerHTML = " <p>Here is my new Paragraph</p> ";
+
+        //OR
+        
+        document.querySelector('#special').innerHTML = "<p>Here is my new Paragraph</p>";
+    </script>
+
+
+</body>
+</html>

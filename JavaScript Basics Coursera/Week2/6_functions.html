@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week - 2</title>
+</head>
+<body>
+    <h1>Functions</h1>
+
+    <p>
+        1. When generalized, functions can be useful in many contexts and situations.<br>
+        Correct-Generalizing your functions, so that they can be used in multiple places in your program will help reduce the amount of code you have to write.<br><br>
+
+        2. It can make your code more reusable.<br>
+        Correct-Try to avoid repeating yourself, when writing programs.<br><br>
+
+        3. Naming a set of instructions can make your code more readable.<br>
+        Correct-Picking names is hard, but when done well, it can signify to others what your intentions are with your programs.
+    </p>
+
+    <script>
+
+        /* //ex1
+        function printString(){
+
+            var string = "I am hungry";
+            var Ustring = string.toUpperCase();
+            console.log(string);  
+            console.log(Ustring);
+        }
+        printString(); */
+
+        /* //ex2
+        function checkNum(){
+            var number = prompt("Enter a valid Number ... ", "");
+            if(number < 10){
+                console.log(`You entered a number smaller than 10 -> ${number}`);
+            }
+            else{
+                console.log(`You entered a big number -> ${number}`);
+            }
+        }
+        checkNum(); */
+
+        /* //ex3
+        function upperMsg (msg) {
+            var upper = msg.toUpperCase();
+            console.log(upper);
+        }
+        upperMsg("hello everyone"); */
+
+        /* //ex4
+        function addNum(num1, num2)
+        {
+            var num = num1 + num2;
+            console.log(num);
+        }
+        addNum(2, 3); */
+
+        //ex5 - returning data
+        function addNum(num1, num2)
+        {
+            var num = num1 + num2;
+            return num;
+            console.log(num);
+        }
+        console.log(addNum(5, 10));
+        
+
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <h1>Capturing Events with JavaScript</h1>
+    
+    <button>click me</button>
+
+    <script>
+
+    /*
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~onclick property
+    //1
+        var btn = document.querySelector('button');
+        function ouch(){
+            alert("button clicked");
+        }
+        btn.onclick = ouch;  //ouch() - So if I put parentheses here, it's not going to wait for me to click. Instead, it's going to run right away. I get the alert without even clicking the button. */
+
+    //2
+        //by using anonymous function
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            alert("button clicked");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+    <style>
+        div{
+            width: 70px;
+            height: 5000px;
+            background-color: rgb(189, 45, 136);
+        }
+    </style>
+</head>
+<body>
+    <h1>Capturing Scroll Events</h1>
+    <div></div>
+
+    <!-- I scroll, it's telling me how many pixels down I've scrolled. -->
+
+    <script>
+        //var pagetop;
+        window.addEventListener('scroll', function(){
+            var pagetop = window.pageYOffset;
+            console.log(pagetop);
+        });
+        
+    </script>
+
+</body>
+</html>

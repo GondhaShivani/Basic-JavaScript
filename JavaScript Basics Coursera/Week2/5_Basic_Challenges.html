@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week - 2</title>
+</head>
+<body>
+    <h1>Challenges 1 to 9</h1>
+    
+    <script>
+        /* //--------------------------------------c1 = name is new lines.
+        console.log("------Challenge 1------");
+        var fname = "Shivani";
+        var lname = "Gondha";
+        console.log(fname);
+        console.log(lname); */
+
+        /* //--------------------------------------c2 = name is same line.
+        console.log("------Challenge 2------");
+        var fname = "Shivani";
+        var lname = "Gondha";
+        console.log(fname + " " + lname); */
+
+        /* //--------------------------------------c3 = description.
+        console.log("------Challenge 3------");
+        var fname = "Shivani";
+        var lname = "Gondha";
+        var adjective = "Charusat University"
+        console.log(`I know that ${fname} ${lname} is in ${adjective}.`); */
+
+        /* //--------------------------------------c4 = prompt name.
+        console.log("------Challenge 4------");
+        //var name = prompt("what's your name?", "shivi"); 
+        // 'shivi' is the default text. If you don't want default text, you can leave the second set of quotes empty.
+        var name = prompt("what's your name?", ""); 
+        console.log(`Hello ${name}, Welcome !!`); */
+
+        /* //--------------------------------------c5 = prompt number.
+        console.log("------Challenge 5------");
+        var number = prompt("Enter a valid Number ... ", "");
+        if(number < 10){
+            console.log(`You entered a number smaller than 10 -> ${number}`);
+        }
+        else{
+            console.log(`You entered a big number -> ${number}`);
+        } */
+
+        /* //--------------------------------------c6 = prompt error.
+        console.log("------Challenge 6------");
+        var number = prompt("Enter a valid Number ... ", "");
+        if(number < 10){
+            console.log(`You entered a number smaller than 10 -> ${number}`);
+        }
+        else if(number > 10){
+            console.log(`You entered a big number -> ${number}`);
+        } 
+        else{
+            console.log(`Ooops !! You did't entered a number... -> ${number}`);
+        } */
+
+        /* //--------------------------------------c7 = prompt + loop.
+        console.log("------Challenge 7------");
+        var number = prompt("Enter a valid Number ... ", "");
+        if(number < 10){
+            console.log(`You entered a number smaller than 10 -> ${number}`);
+            for(var i=0;i<10;i++)
+            {
+                console.log(i);
+            }
+        }
+        else if(number > 10){
+            console.log(`You entered a big number -> ${number}`);
+        } 
+        else{
+            console.log(`Ooops !! You did't entered a number... -> ${number}`); 
+        } */
+
+        /* //--------------------------------------c8 = prompt + loop + indication.
+        console.log("------Challenge 8------");
+        var number = prompt("Enter a valid Number ... ", "");
+        if(number < 10){
+            console.log(`You entered a number smaller than 10 -> ${number}`);
+            for(var i=0;i<10;i++)
+            {
+                if(i == number)
+                {
+                    console.log(`${i} <- Here is your entered number.`);
+                }
+                else
+                {
+                    console.log(i);
+                }
+            }
+        }
+        else if(number > 10){
+            console.log(`You entered a big number -> ${number}`);
+        } 
+        else{
+            console.log(`Ooops !! You did't entered a number... -> ${number}`); 
+        }  */
+
+        //--------------------------------------c9 = prompt + color.
+        console.log("------Challenge 9------");
+        var color = prompt("Enter a color : ");
+        var lcolor = color.toLowerCase();
+
+        if( color === 'red' || color === 'blue' || color === 'yellow' )
+        {
+            console.log(`You entered primary color : ${color}`);
+        }
+        else if(color === 'orange' || color === 'green' || color === 'purple' )
+        {
+            console.log(`You entered SECONDARY color : ${color}`);
+        }
+        else{
+            console.log(`You typed neither a primary color nor a secondary color : ${color}`);
+        }
+
+    </script>
+</body>
+</html>

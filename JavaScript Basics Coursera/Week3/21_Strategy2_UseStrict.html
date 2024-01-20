@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    
+    <h1>Startegy2</h1>
+
+    <h4>The second strategy is to use this use strict directive. Use the var keyword when defining a new variable is really very problematic or potentially very problematic.</h4>
+
+
+    <script>
+/*         //1
+        myVar1 = "myVar is bydefault global variable.";
+        console.log(myVar1);
+ */
+
+        //2
+        "use strict";
+        myVar2 = "myVar2 can't console bcz it's not declare properly";
+        console.log(myVar2);
+        //myVar2 is not defined
+
+        //3 
+        //we have to declare variable properly while using "use strict" as var myVar.
+        "use strict";
+        var myVar3 = "myVar is global variable.";
+        console.log(myVar3);
+    </script>
+
+</body>
+</html>

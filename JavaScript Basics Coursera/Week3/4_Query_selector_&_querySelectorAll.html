@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    <!-- <h1>querySelector()</h1>
+    <div id="special">
+        <p class="someclass">Here is some text.</p>
+        <p>Here is some more text.</p>
+        <p class="someclass">Here is even some more text.</p>
+    </div> -->
+
+    <hr> 
+
+    <h1>querySelectorAll()</h1>
+    <!-- for querySelectorAll  -->
+    <div id="special">
+        <p>Here is some text.</p>
+        <p>Here is some more text.</p>
+        <p>Here is even some more text.</p>
+    </div>
+        <p>Not this Paragraph !!</p>
+
+    <script>
+
+        //---------------------------------------querySelector
+        
+        //that query selector will always return the first element that it finds that matches what you pass in here.
+
+        /* 
+        //------------------------  script for querySelector
+        var myText = document.querySelector('#special .someclass');
+        myText.style.color = "red";
+        myText.style.fontSize = "24px"; 
+        
+        */
+
+        //Now if I were to go in here and add my class, someclass to another element. it still only affect the first paragraph.
+
+        //remember with both querySelector and querySelectorAll that you have to pass in. When you pass stuff in, you're passing in the CSS syntax #special instead of just special. Or .someclass, instead of just someclass, that's really important with querySelector.
+
+
+        //-------------------------------------querySelectorAll
+
+        //So querySelectorAll will allow us to get groups of elements and then we would loop through them to affect them one at a time.
+
+        //------------------------  script for querySelectorAll
+        var myText = document.querySelectorAll('#special p');
+        for( var i=0; i<myText.length; i++ )
+        {
+            myText[i].style.fontWeight = "bold";
+        }
+
+        /* //-------------------------------------Properties
+        //properties have an equal sign
+
+         element.style.color = "color-name";
+         element.style.property = "value";
+         element.innerHTML = "value";
+         element.className = "value"; */
+
+        /* //
+        -------------------------------------Element Methods
+        //methods have paranthesis.
+
+        .setAttribute("attributeName", "value");
+        .removeAttribute("attributeName");
+        .getAttribute("attributeName"); */
+
+        
+    </script>
+</body>
+</html>

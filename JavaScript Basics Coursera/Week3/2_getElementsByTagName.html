@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+</head>
+<body>
+    
+    <h1>getElementsByTagName</h1>
+    <p>Here is some text.</p>
+    <p>Here is some more text.</p>
+    <p>Here is even some more text.</p>
+
+    <script>
+    //-------------------------------------- getElementsByTagName -----------------------------------
+
+    //that's getElementByID, but this is getElement's', so this is going to get more than one element, it's going to get a collection of elements, and then we can do something with that collection of elements.
+
+    /* //~~~~~~~~~~~~~~~~~~~~~~~~~  1  ~~~~~~~~~~~~~~~~~~~
+
+    var myParagraphs = document.getElementsByTagName('p');
+    console.log(myParagraphs); 
+    
+    */
+    
+    //That's important to understand about this particular method. Whereas getElementByID gives me always just one thing. It'll always give me one because IDs are unique. Whereas getElementsByTagName will give me an HTMLCollection of elements that I need to then do something else with.
+
+    //If I wanted to set the color of these paragraphs to red, then I would need to use a loop because I can't apply the style color to a collection of things all at once. I have to apply them to each item in that collection. I need to use a loop to loop through each of the elements in that collection,
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~  2  ~~~~~~~~~~~~~~~~~~~
+    var ps = document.getElementsByTagName('p');
+    for ( var i=0; i<ps.length; i++ )
+    {
+        ps[i].style.color = "blue";
+        alert(`showing paragraph ${i}`); //run in firefox for better result.
+    }
+
+    </script>
+</body>
+</html>

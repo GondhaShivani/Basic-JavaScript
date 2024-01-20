@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week - 2 </title>
+</head>
+<body>
+    <h1>Useful Examples</h1>
+
+    <script>
+        /* //-------------------------------------------ex1
+        console.log( Math.random() );  
+        //generates only between 0 and almost 1.
+        //0 inclusive, 1 exclusive
+        //random number generator in JS is not truly random it's using an algorithm to generate number. */
+
+        //-------------------------------------------ex2
+        //if we want random number between integer then we can call a function.
+        /* function randomInt( min, max )
+        {
+            var numOfValue = max - min + 1;   //possible random values.
+            var randomNum = Math.random();
+            var randomValue = numOfValue * randomNum;
+            var roundedRandomVal = Math.floor(randomValue);
+            var finalNum = min + roundedRandomVal;
+
+            console.log( `Random value : ${randomValue}`);        //random integer value
+            console.log( `Rounded random value : ${roundedRandomVal}`);   //rounded random integer value
+            console.log(`Final random Num = ${finalNum}`);  //rounded random number between 10-20
+        }
+        randomInt( 10, 20 ); */
+
+        /* //-------------------------------------------ex3
+        var food = ['cheese', 'butter', 'fastfood', 'fruits'];
+        function randomInt( min, max )
+        {
+            var numOfValue = max - min + 1;   //possible random values.
+            var randomNum = Math.random();
+            var randomValue = numOfValue * randomNum;
+            var roundedRandomVal = Math.floor(randomValue);
+            var finalNum = min + roundedRandomVal;
+
+            return finalNum;
+            //console.log(`Final random Num = ${finalNum}`);  //rounded random number between 10-20
+
+        }
+        console.log( food[ randomInt(0, 3) ] ); */     //0-3 index of array element
+
+        //----------------------------------------ex4 Refectoring
+
+        //creating random number between min and max
+        var food = ['cheese', 'butter', 'fastfood', 'fruits'];
+         function randomInt( min, max ){
+            return Math.floor( (max - min + 1) * Math.random() ) + min;
+         }
+
+         console.log( food[ randomInt(0, 3)] );
+
+
+    </script>
+</body>
+</html>

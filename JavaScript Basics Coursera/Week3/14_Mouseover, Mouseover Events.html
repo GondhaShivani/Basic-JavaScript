@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+<style>
+    div{
+        width: 70px;
+        height: 70px;
+        background-color: skyblue;
+    }
+</style>
+
+</head>
+<body>
+    <h1>Mouseover, Mouseover Events: HTML</h1>
+
+    <h2>Roll your mouse over the boxes</h2>
+    
+    <div>
+
+    </div>
+
+    <script>
+        var heading = document.querySelector('h2');
+        var box = document.querySelector('div');
+        
+        box.addEventListener('mouseover', function(){
+            heading.innerHTML=`The mouse is 'over' the box`;
+        });
+
+        box.addEventListener('mouseout', function(){
+            heading.innerHTML=`The mouse has 'left' the box`;
+        });
+
+        /* heading.addEventListene('mouseover', function(){
+            heading.innerHTML = "roll your mouse over the boxes";
+        }); */
+    </script>
+</body>
+</html>
