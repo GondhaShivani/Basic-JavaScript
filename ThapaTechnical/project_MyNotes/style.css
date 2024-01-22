@@ -1,0 +1,131 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 60px;
+}
+
+.heading {
+  background-color: #cde72a; /* Change to your desired heading background color */
+  color: #000000; /* Change to your desired heading text color */
+  padding: 20px;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.btn-div {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.learn-more {
+  background-color: #cde72a; /* Change to your desired button background color */
+  color: #000000; /* Change to your desired button text color */
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: #d6e768; /* Change to your desired circle color */
+  border-radius: 50%;
+  color: black;
+  transition: width 0.3s, height 0.3s;
+}
+
+.button-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: 20px;
+}
+
+.note {
+  width: 600px;
+  height: 150px;
+  background-color: #edeaea;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+}
+
+.note .operation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.note .operation button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+  color: #000;
+}
+
+.note .operation button:hover {
+  text-decoration: underline;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.note .main {
+  flex-grow: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.note textarea {
+  width: 98%;
+  height: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.note.editMode .main {
+  display: none;
+}
+
+.note.editMode textarea {
+  /*   display: block; */
+  resize: none;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.note .edit i {
+  color: #2ecc71;
+}
+
+.note .delete i {
+  color: #ff5252;
+}
+
+.hidden {
+  display: none;
+}
