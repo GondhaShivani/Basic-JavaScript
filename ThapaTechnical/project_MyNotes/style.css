@@ -11,11 +11,12 @@ body {
   background-color: #cde72a; /* Change to your desired heading background color */
   color: #000000; /* Change to your desired heading text color */
   padding: 20px;
-  text-align: center;
+  text-align: left;
+  border-bottom: 2px solid black;
 }
 
 .heading h1 {
-  font-size: 24px;
+  font-size: 35px;
   margin: 0;
 }
 
@@ -33,6 +34,8 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .circle {
@@ -42,7 +45,7 @@ body {
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  background: #d6e768; /* Change to your desired circle color */
+  background: #9c9f85; /* Change to your desired circle color */
   border-radius: 50%;
   color: black;
   transition: width 0.3s, height 0.3s;
@@ -55,6 +58,19 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-style: bold;
   font-size: 20px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.button-text:hover {
+  font-size: 17px;
+}
+
+.learn-more:hover {
+  background-color: #fff200;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
 }
 
 .note {
